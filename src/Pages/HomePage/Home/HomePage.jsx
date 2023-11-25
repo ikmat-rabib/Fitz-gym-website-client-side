@@ -1,10 +1,13 @@
+import AboutUs from "../AboutUs/AboutUs";
+import Banner from "../Banner/Banner";
 
 
 const HomePage = () => {
     return (
-        <div>
-           <h2> homeeeeeee</h2>
-        </div>
+        <>
+           <Banner></Banner>
+           <AboutUs></AboutUs>
+        </>
     );
 };
 
