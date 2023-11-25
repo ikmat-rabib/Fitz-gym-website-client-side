@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <>
             <div className=" bg-[#0167BB] text-white">
-                <Container>
+                <div className="max-w-6xl mx-auto ">
                     <div className="navbar">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -36,7 +36,7 @@ const Navbar = () => {
                         <a className="btn btn-outline bg-[#0167BB] text-white hover:bg-[#08406d] hover:text-white hover:border-0">Button</a>
                     </div>
                     </div>
-                </Container>
+                </div>
             </div>
 
         </>

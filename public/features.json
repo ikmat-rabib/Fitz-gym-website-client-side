@@ -1,0 +1,39 @@
+[
+    {
+      "_id": "1",
+      "name": "Yoga Studio",
+      "description": "Experience tranquility and flexibility in our dedicated yoga studio, offering a serene environment for yoga practitioners of all levels.",
+      "icon": "https://i.ibb.co/c2vYc2B/yoga-pose.png"
+    },
+    {
+      "_id": "2",
+      "name": "Running Zone",
+      "description": "Hit the ground running in our specialized area equipped with treadmills and space for cardio enthusiasts to pursue their running goals.",
+      "icon": "https://i.ibb.co/xJ5skC2/running.png"
+    },
+    {
+      "_id": "3",
+      "name": "Protein Supplement Bar",
+      "description": "Refuel and recover with our on-site protein supplement bar, providing a variety of supplements to support your fitness journey and optimize muscle recovery.",
+      "icon": "https://i.ibb.co/37pyvyz/supplement.png"
+    },
+    {
+      "_id": "4",
+      "name": "Bodybuilding Area",
+      "description": "Sculpt and strengthen your physique in our designated bodybuilding zone, equipped with a range of weights and machines for targeted muscle development.",
+      "icon": "https://i.ibb.co/RbZ8HRs/body-building.png"
+    },
+    {
+      "_id": "5",
+      "name": "Musculation Zone",
+      "description": "Elevate your strength and endurance through musculation exercises, fostering overall fitness and functional strength in a dedicated workout space.",
+      "icon": "https://i.ibb.co/HPYT4jt/muscle.png"
+    },
+    {
+      "_id": "6",
+      "name": "Weightlifting Zone",
+      "description": "Power up your training with our comprehensive weightlifting zone, featuring free weights and resistance machines to cater to various weightlifting routines and techniques.",
+      "icon": "https://i.ibb.co/3y73TNc/weightlifting.png"
+    }
+  ]
+  
