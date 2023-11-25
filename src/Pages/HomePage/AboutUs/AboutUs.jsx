@@ -18,7 +18,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="w-1/2 flex justify-end">
-                        <div className="w-80 h-60 border-4 border-[#219bff] rounded-lg relative">
+                        <div className="w-80 h-60 border-4 border-[#219bff] hover:bg-[#219bff] rounded-lg relative">
                             <img className="w-80 rounded-lg shadow-2xl hover:shadow-[#219bff] absolute bottom-3 right-[10px]" src="https://i.ibb.co/xhvZSHk/trainers.jpg" alt="" />
                         </div>
                     </div>

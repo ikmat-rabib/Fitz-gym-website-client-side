@@ -2,37 +2,43 @@
     {
       "_id": "101",
       "clientName": "Alice Johnson",
-      "rating": 4.5,
+      "clientPic": "https://i.ibb.co/gWkQfyg/member1.png",
+      "rating": 4,
       "comment": "Amazing yoga studio! The serene ambiance makes every session a peaceful retreat."
     },
     {
       "_id": "102",
       "clientName": "John Smith",
-      "rating": 5.0,
+      "clientPic": "https://i.ibb.co/ryWr1c3/member2.png",
+      "rating": 5,
       "comment": "The running zone is fantastic! Well-maintained treadmills and a great cardio space."
     },
     {
       "_id": "103",
       "clientName": "Emily Davis",
-      "rating": 4.8,
+      "clientPic": "https://i.ibb.co/CnqsZrz/member4.png",
+      "rating": 4,
       "comment": "Love the protein supplement bar! It offers a wide range of supplements, perfect for my post-workout recovery."
     },
     {
       "_id": "104",
       "clientName": "Chris Anderson",
-      "rating": 4.2,
+      "clientPic": "https://i.ibb.co/QY7w2n5/member3.png",
+      "rating": 5,
       "comment": "Great bodybuilding area! The variety of weights and machines make it easy to target specific muscle groups."
     },
     {
       "_id": "105",
       "clientName": "Sophie Turner",
-      "rating": 4.7,
+      "clientPic": "https://i.ibb.co/ryWr1c3/member2.png",
+      "rating": 3,
       "comment": "Musculation zone is top-notch! Effective exercises and a dedicated space for functional strength training."
     },
     {
       "_id": "106",
       "clientName": "Michael Brown",
-      "rating": 4.9,
+      "clientPic": "https://i.ibb.co/gWkQfyg/member1.png",
+      "rating": 4,
       "comment": "The weightlifting zone is superb! Comprehensive equipment for various weightlifting routines."
     }
   ]
