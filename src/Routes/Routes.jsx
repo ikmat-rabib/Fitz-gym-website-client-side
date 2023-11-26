@@ -6,6 +6,8 @@ import HomePage from "../Pages/HomePage/Home/HomePage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import OurTrainers from "../Pages/OurTrainers/OurTrainers";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
+import LoginPage from "../Pages/LoginPage/LoginPage";
+import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 
   export const router = createBrowserRouter([
     {
@@ -20,6 +22,14 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
         {
             path: 'trainers',
             element: <OurTrainers></OurTrainers>
+        },
+        {
+            path: 'login',
+            element: <LoginPage></LoginPage>
+        },
+        {
+            path: 'register',
+            element: <RegisterPage></RegisterPage>
         },
         {
             path: 'trainers/:id',

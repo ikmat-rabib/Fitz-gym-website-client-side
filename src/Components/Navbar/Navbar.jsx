@@ -1,9 +1,19 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const navOptions = <>
         <li><Link to='/'>Home</Link></li>
@@ -37,7 +47,31 @@ const Navbar = () => {
                     </div>
 
                     <div className="navbar-end">
-                        <a className="btn btn-outline bg-[#0167BB] text-white hover:bg-[#08406d] hover:text-white hover:border-0">Button</a>
+                    {
+                        user ?
+                            <div className="dropdown dropdown-end dropdown-hover ">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
+                                    
+                                        <img className="w-10 rounded-full" src={user.photoURL} />
+                                    
+                                </label>
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0167BB] text-white rounded-box w-52">
+                                    <li><span><small className=" ">User: {user.displayName}</small></span></li>
+                                    <li><span><small className=" ">Email: {user.email}</small></span></li>
+                                    <li><button onClick={handleSignOut} className="btn btn-sm bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-105 hover:-skew-x-6 hover:border-0">Sign Out</button></li>
+                                </ul>
+                            </div>
+                            :
+                            <div className="space-x-3 flex  items-center">
+                                <Link to='/login'>
+                                    <button className="btn btn-sm bg-[#0167BB] hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0">Login</button>
+                                </Link>
+                                <p>or</p>
+                                <Link to='/register'>
+                                    <button className="btn btn-sm bg-[#0167BB] hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0">Register</button>
+                                </Link>
+                            </div>
+                    }
                     </div>
                     </div>
                 </div>

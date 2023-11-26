@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Container from "../../../Components/Container/Container";
 import TrainerCard from "../../../Components/TrainerCard/TrainerCard";
 import useTrainers from "../../../Hooks/useTrainers";
