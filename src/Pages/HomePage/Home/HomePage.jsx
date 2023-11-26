@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import Blogs from "../Blogs/Blogs";
@@ -10,13 +11,16 @@ import Reviews from "../Reviews/Reviews";
 const HomePage = () => {
     return (
         <>
-           <Banner></Banner>
-           <AboutUs></AboutUs>
-           <Featured></Featured>
-           <OurTeam></OurTeam>
-           <Newsletter></Newsletter>
-           <Reviews></Reviews>
-           <Blogs></Blogs>
+            <Helmet>
+                <title>FitZ | Home</title>
+            </Helmet>
+            <Banner></Banner>
+            <AboutUs></AboutUs>
+            <Featured></Featured>
+            <OurTeam></OurTeam>
+            <Newsletter></Newsletter>
+            <Reviews></Reviews>
+            <Blogs></Blogs>
         </>
     );
 };

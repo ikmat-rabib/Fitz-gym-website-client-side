@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import Container from "../../../Components/Container/Container";
 import TrainerCard from "../../../Components/TrainerCard/TrainerCard";
+import useTrainers from "../../../Hooks/useTrainers";
 
 
 const OurTeam = () => {
 
-    const [trainers, setTrainers] = useState([])
+    const [trainers] = useTrainers()
 
-    useEffect(() => {
-        fetch('trainers.json')
-        .then(res => res.json())
-        .then(data => setTrainers(data))
-    } ,[])
 
     return (
         <>
@@ -23,7 +19,11 @@ const OurTeam = () => {
 
                 <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {
-                        trainers.map(trainer => <TrainerCard key={trainer.id} trainer={trainer}></TrainerCard>)
+                        trainers.map(trainer =>
+                            <TrainerCard
+                                key={trainer.id}
+                                trainer={trainer}
+                            ></TrainerCard>)
                     }
                 </div>
             </Container>

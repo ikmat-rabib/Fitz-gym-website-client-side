@@ -2,9 +2,9 @@ import { FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 
-const TrainerCard = ({trainer}) => {
+const TrainerCard = ({ trainer }) => {
 
-    const {trainerName, trainerPic, availableTime, socialLink, experience} = trainer
+    const { trainerName, trainerPic, availableTime, socialLink, experience } = trainer
 
     return (
         <>
@@ -16,7 +16,12 @@ const TrainerCard = ({trainer}) => {
                     <h2 className="text-3xl font-semibold text-center text-white ">{trainerName}</h2>
                     <p className="font-medium text-center underline">{availableTime}</p>
                     <p className="text-justify">{experience}</p>
-                    <Link to={socialLink} className="text-4xl flex justify-center font-bold text-[#219bff]"><FaInstagram></FaInstagram></Link>
+                    <div className="flex justify-between items-center">
+                        <Link >
+                            <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">Know More</button>
+                        </Link>
+                        <Link to={socialLink} className="text-4xl flex justify-center font-bold text-[#219bff]"><FaInstagram></FaInstagram></Link>
+                    </div>
                 </div>
             </div>
         </>
