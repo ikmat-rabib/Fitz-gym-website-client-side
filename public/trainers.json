@@ -1,27 +1,29 @@
 [
-    {
-      "_id": "202",
-      "trainerName": "Alex Johnson",
-      "trainerPic": "https://i.ibb.co/v43gYsN/Alex-Johnson.jpg",
-      "experience": "Specialized in HIIT and cardiovascular training. Passionate about helping clients achieve their fitness goals.",
-      "socialLink": "https://www.instagram.com/",
-      "availableTime": "Tue to Thu: 3 pm - 7 pm"
-    },
-    {
-      "_id": "203",
-      "trainerName": "Ryan Smith",
-      "trainerPic": "https://i.ibb.co/KqVvCPt/Ryan-Smith.jpg",
-      "experience": "Former professional athlete turned personal trainer. Expertise in sports-specific training and injury prevention.",
-      "socialLink": "https://www.instagram.com/",
-      "availableTime": "Mon, Wed, Fri: 1 pm - 5 pm"
-    },
-    {
-      "_id": "204",
-      "trainerName": "Mia Turner",
-      "trainerPic": "https://i.ibb.co/brqCVmt/Mia-Turner.jpg",
-      "experience": "Yoga and mindfulness expert. Focus on holistic well-being through yoga and meditation practices.",
-      "socialLink": "https://www.instagram.com/",
-      "availableTime": "Mon to Sun: 9 am - 3 pm"
-    }
-  ]
-  
+  {
+    "_id": "202",
+    "trainerName": "Alex Johnson",
+    "trainerPic": "https://i.ibb.co/v43gYsN/Alex-Johnson.jpg",
+    "yearsExp": 5,
+    "details": "Specialized in HIIT and cardiovascular training. Passionate about helping clients achieve their fitness goals. Alex creates personalized workout plans tailored to individual needs.",
+    "socialLink": "https://www.instagram.com/",
+    "availableTime": "Tue to Thu: 3 pm - 7 pm"
+  },
+  {
+    "_id": "203",
+    "trainerName": "Ryan Smith",
+    "trainerPic": "https://i.ibb.co/KqVvCPt/Ryan-Smith.jpg",
+    "yearsExp": 8,
+    "details": "Former professional athlete turned personal trainer. Expertise in sports-specific training and injury prevention. Ryan emphasizes holistic fitness to enhance overall well-being.",
+    "socialLink": "https://www.instagram.com/",
+    "availableTime": "Mon, Wed, Fri: 1 pm - 5 pm"
+  },
+  {
+    "_id": "204",
+    "trainerName": "Mia Turner",
+    "trainerPic": "https://i.ibb.co/brqCVmt/Mia-Turner.jpg",
+    "yearsExp": 10,
+    "details": "Yoga and mindfulness expert. Focus on holistic well-being through yoga and meditation practices. Mia encourages balance and tranquility for a healthier lifestyle.",
+    "socialLink": "https://www.instagram.com/",
+    "availableTime": "Mon to Sun: 9 am - 3 pm"
+  }
+]

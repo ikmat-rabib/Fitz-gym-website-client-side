@@ -6,7 +6,7 @@ const useTrainers = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('trainers.json')
+        fetch('http://localhost:5000/trainers')
             .then(res => res.json())
             .then(data => {
                 setTrainers(data)

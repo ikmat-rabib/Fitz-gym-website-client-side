@@ -21,7 +21,7 @@ const OurTeam = () => {
                     {
                         trainers.map(trainer =>
                             <TrainerCard
-                                key={trainer.id}
+                                key={trainer._id}
                                 trainer={trainer}
                             ></TrainerCard>)
                     }

@@ -5,6 +5,7 @@ import Main from "../Layout/Main";
 import HomePage from "../Pages/HomePage/Home/HomePage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import OurTrainers from "../Pages/OurTrainers/OurTrainers";
+import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 
   export const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ import OurTrainers from "../Pages/OurTrainers/OurTrainers";
         {
             path: 'trainers',
             element: <OurTrainers></OurTrainers>
+        },
+        {
+            path: 'trainers/:id',
+            element: <TrainerDetails></TrainerDetails>,
+            loader: ({params}) => fetch(`http://localhost:5000/trainers/${params.id}`)
         },
       ]
     },
