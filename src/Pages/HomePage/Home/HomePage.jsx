@@ -1,5 +1,6 @@
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
+import Blogs from "../Blogs/Blogs";
 import Featured from "../Featured/Featured";
 import Newsletter from "../Newsletter/Newsletter";
 import OurTeam from "../OurTeam/OurTeam";
@@ -15,6 +16,7 @@ const HomePage = () => {
            <OurTeam></OurTeam>
            <Newsletter></Newsletter>
            <Reviews></Reviews>
+           <Blogs></Blogs>
         </>
     );
 };

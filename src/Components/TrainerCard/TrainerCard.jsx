@@ -14,9 +14,9 @@ const TrainerCard = ({trainer}) => {
                 </figure>
                 <div className="card-body items-center space-y-3 text-white absolute bottom-[0px] rounded-b-2xl bg-slate-700 bg-opacity-60 md:hidden group-hover:block">
                     <h2 className="text-3xl font-semibold text-center text-white ">{trainerName}</h2>
-                    <p className="font-medium text-center">{availableTime}</p>
+                    <p className="font-medium text-center underline">{availableTime}</p>
                     <p className="text-justify">{experience}</p>
-                    <Link to={socialLink} className="text-3xl flex justify-center "><FaInstagram></FaInstagram></Link>
+                    <Link to={socialLink} className="text-4xl flex justify-center font-bold text-[#219bff]"><FaInstagram></FaInstagram></Link>
                 </div>
             </div>
         </>

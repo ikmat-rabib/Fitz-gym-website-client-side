@@ -1,12 +1,15 @@
-import Container from "../Container/Container";
+
 
 
 
 const Navbar = () => {
 
     const navOptions = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><a>Home</a></li>
+        <li><a>Our Trainers</a></li>
+        <li><a>Gallery</a></li>
+        <li><a>Classes</a></li>
+        <li><a>Blogs</a></li>
     </>
 
     return (
