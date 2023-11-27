@@ -56,7 +56,7 @@ const RegisterPage = () => {
 
                 toast.success('Registration Successful', {
                     position: "top-center",
-                    autoClose: 4000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -75,7 +75,7 @@ const RegisterPage = () => {
     return (
         <>
             <Helmet>
-                <title>FitZ | Login</title>
+                <title>FitZ | Register</title>
             </Helmet>
             <div className="bg-white">
                 <div className="max-w-6xl mx-auto ">
@@ -85,50 +85,49 @@ const RegisterPage = () => {
                                 <h1 className="text-5xl font-bold text-center">Register Now!</h1>
                                 <img className="w-" src="https://i.ibb.co/N7fVq2L/register.jpg" alt="" />
                             </div>
-                            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">
 
-                                <form onSubmit={handleRegister} className="card-body">
+                                <form onSubmit={handleRegister} className="card-body py-4">
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Name</span>
+                                            <span className="label-text text-[#0167BB]">Name</span>
                                         </label>
                                         <input type="text" name="name" placeholder="name" className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Email</span>
+                                            <span className="label-text text-[#0167BB]">Email</span>
                                         </label>
                                         <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Photo URL</span>
+                                            <span className="label-text text-[#0167BB]">Photo URL</span>
                                         </label>
                                         <input type="text" name="photo" placeholder="photo" className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Password</span>
+                                            <span className="label-text text-[#0167BB]">Password</span>
                                         </label>
                                         <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                                     </div>
 
-                                    <div className="form-control mt-6">
+                                    <div className="form-control mt-4">
 
-                                        <input className="btn bg-[#0167BB] hover:bg-[#219bff] w-full text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0" type="submit" value="Register" />
+                                        <input className="btn bg-[#0167BB] hover:bg-[#219bff] w-full text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0" type="submit" value="Register" />
                                     </div>
 
                                 </form>
 
-                                <div className="text-white text-center mb-8">
-                                    <p>or,</p>
-                                    <h3 className="text-2xl font-semibold">Sign in with</h3>
+                                <div className="text-slate-600 text-center mb-">
+                                    <h3 className="text-lg font-semibold">Or, Sign in with</h3>
                                     <button onClick={handleGoogleSignIn} className="p-3 my-3 text-3xl bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:rounded-full hover:border-0"> <FaGoogle></FaGoogle> </button>
-                                    <p className="mb-6">Already have an account? <Link className=" font-bold text-[#219bff]" to='/login'>Login Here.</Link></p>
+                                    <p className="mb-5">Already have an account? <Link className=" font-bold text-[#219bff]" to='/login'>Login Here.</Link></p>
                                 </div>
                             </div>
                         </div>

@@ -64,11 +64,10 @@ const Navbar = () => {
                             :
                             <div className="space-x-3 flex  items-center">
                                 <Link to='/login'>
-                                    <button className="btn btn-sm bg-[#0167BB] hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0">Login</button>
+                                    <button className="btn btn-xs bg-[#0167BB] text-xs hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-105 hover:-skew-x-12 hover:border-0">Login</button>
                                 </Link>
-                                <p>or</p>
                                 <Link to='/register'>
-                                    <button className="btn btn-sm bg-[#0167BB] hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0">Register</button>
+                                    <button className="btn btn-xs bg-[#0167BB] text-xs hover:bg-[#219bff]  text-white rounded-md uppercase hover:scale-105 hover:-skew-x-12 hover:border-0">Register</button>
                                 </Link>
                             </div>
                     }

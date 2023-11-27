@@ -20,7 +20,7 @@ const TrainerCard = ({ trainer }) => {
                         <Link to={`/trainers/${_id}`} state={{ trainer }}>
                             <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">Know More</button>
                         </Link>
-                        <Link to={socialLink} className="text-4xl flex justify-center font-bold text-[#219bff]"><FaInstagram></FaInstagram></Link>
+                        <Link to={socialLink} className="text-4xl flex justify-center font-bold text-[#219bff]"><FaInstagram className="hover:scale-105"></FaInstagram></Link>
                     </div>
                 </div>
             </div>

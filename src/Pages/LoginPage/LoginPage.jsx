@@ -47,7 +47,7 @@ const LoginPage = () => {
                 console.log(result.user)
                 toast.success('Login Successful', {
                     position: "top-center",
-                    autoClose: 5000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -60,7 +60,7 @@ const LoginPage = () => {
             .catch(() => {
                 toast.error("User Email/Password doesn't match", {
                     position: "top-center",
-                    autoClose: 5000,
+                    autoClose: 3500,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -77,7 +77,7 @@ const LoginPage = () => {
             .then(() => {
                 toast.success('Login Successful', {
                     position: "top-center",
-                    autoClose: 5000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -103,35 +103,34 @@ const LoginPage = () => {
                                 <h1 className="text-5xl font-bold text-center">Login now!</h1>
                                 <img className="w-" src="https://i.ibb.co/hm9059Y/Tiny-people-carrying-key-to-open-padlock.jpg" alt="" />
                             </div>
-                            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                                <form onSubmit={handleLogin} className="card-body">
+                            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">
+                                <form onSubmit={handleLogin} className="card-body py-5">
                                     <div className="form-control">
 
                                         <label className="label">
-                                            <span className="label-text">Email</span>
+                                            <span className="label-text text-[#0167BB]">Email</span>
                                         </label>
                                         <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Password</span>
+                                            <span className="label-text text-[#0167BB]">Password</span>
                                         </label>
                                         <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                                     </div>
 
                                     <div className="form-control mt-6">
 
-                                        <input className="btn bg-[#0167BB] hover:bg-[#219bff] w-full text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 hover:border-0" type="submit" value="Login" />
+                                        <input className="btn bg-[#0167BB] hover:bg-[#219bff] w-full text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0" type="submit" value="Login" />
                                     </div>
 
                                 </form>
 
-                                <div className="text-white text-center mb-8">
-                                    <p>or,</p>
-                                    <h3 className="text-2xl font-semibold">Sign in with</h3>
+                                <div className="text-slate-600 text-center mb-8">
+                                    <h3 className="text-lg font-semibold">Or, Sign in with</h3>
                                     <button onClick={googleLogin} className="p-3 my-3 text-3xl bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:rounded-full hover:border-0"> <FaGoogle></FaGoogle> </button>
-                                    <p className="mb-6">Do not have an account? <Link className=" font-bold text-[#219bff]" to='/register'>Register Here.</Link></p>
+                                    <p className="">Do not have an account? <Link className=" font-bold text-[#219bff]" to='/register'>Register Here.</Link></p>
                                 </div>
                             </div>
                         </div>

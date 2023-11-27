@@ -11,6 +11,8 @@ import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 import GalleryPage from "../Pages/GalleryPage/GalleryPage";
 import Classes from "../Pages/Classes/Classes";
 import Forum from "../Pages/Forum/Forum";
+import PrivateRoute from "./PrivateRoute";
+import BeTrainerPage from "../Pages/BeTrainerPage/BeTrainerPage";
 
   export const router = createBrowserRouter([
     {
@@ -50,9 +52,13 @@ import Forum from "../Pages/Forum/Forum";
             element: <RegisterPage></RegisterPage>
         },
         {
-            path: 'trainers/:id',
-            element: <TrainerDetails></TrainerDetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/trainers/${params.id}`)
+          path: 'trainers/:id',
+          element: <TrainerDetails></TrainerDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/trainers/${params.id}`)
+        },
+        {
+            path: 'be-trainer',
+            element: <PrivateRoute><BeTrainerPage></BeTrainerPage></PrivateRoute>
         },
       ]
     },

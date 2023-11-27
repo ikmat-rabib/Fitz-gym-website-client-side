@@ -11,7 +11,7 @@ const GalleryPage = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('gallery.json')
+        fetch('http://localhost:5000/gallery')
             .then(res => res.json())
             .then(data => {
                 setGallery(data)

@@ -24,7 +24,7 @@ const TrainerDetails = () => {
                         <p> <span className="font-semibold">Available:</span>  {availableTime}.</p>
                         <p><span className="font-semibold">Description:</span> {details}</p>
                         <p><span className="font-semibold">Experience:</span> {yearsExp} years.</p>
-                        <p className="flex items-center gap-5"><span className="font-semibold">Social:</span> <Link to={socialLink} className="text-4xl font-bold text-[#219bff]"><FaInstagram></FaInstagram></Link></p>
+                        <p className="flex items-center gap-5"><span className="font-semibold">Social:</span> <Link to={socialLink} className="text-4xl font-bold text-[#219bff]"><FaInstagram className="hover:scale-105"></FaInstagram></Link></p>
                     </div>
                 </div>
             </Container>
