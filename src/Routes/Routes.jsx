@@ -8,6 +8,7 @@ import OurTrainers from "../Pages/OurTrainers/OurTrainers";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
+import GalleryPage from "../Pages/GalleryPage/GalleryPage";
 
   export const router = createBrowserRouter([
     {
@@ -22,6 +23,11 @@ import RegisterPage from "../Pages/RegisterPage/RegisterPage";
         {
             path: 'trainers',
             element: <OurTrainers></OurTrainers>
+        },
+        {
+            path: 'gallery',
+            element: <GalleryPage></GalleryPage>
+            
         },
         {
             path: 'login',
