@@ -9,6 +9,8 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 import GalleryPage from "../Pages/GalleryPage/GalleryPage";
+import Classes from "../Pages/Classes/Classes";
+import Forum from "../Pages/Forum/Forum";
 
   export const router = createBrowserRouter([
     {
@@ -27,6 +29,16 @@ import GalleryPage from "../Pages/GalleryPage/GalleryPage";
         {
             path: 'gallery',
             element: <GalleryPage></GalleryPage>
+            
+        },
+        {
+            path: 'classes',
+            element: <Classes></Classes>
+            
+        },
+        {
+            path: 'forum',
+            element: <Forum></Forum>
             
         },
         {

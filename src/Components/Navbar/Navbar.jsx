@@ -19,8 +19,8 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/trainers'>Our Trainers</Link></li>
         <li><Link to='/gallery'>Gallery</Link></li>
-        <li><Link>Classes</Link></li>
-        <li><Link>Blogs</Link></li>
+        <li><Link to='/classes'>Classes</Link></li>
+        <li><Link to='/forum'>Forum</Link></li>
     </>
 
     return (

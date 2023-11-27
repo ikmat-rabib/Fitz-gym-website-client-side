@@ -5,8 +5,8 @@ const GalleryCard = ({ gImage }) => {
     const { imageName, link } = gImage
 
     return (
-        <div>
-            <img src={link} alt={imageName} />
+        <div className="flex justify-center ">
+            <img className="rounded-xl" src={link} alt={imageName} />
         </div>
     );
 };
