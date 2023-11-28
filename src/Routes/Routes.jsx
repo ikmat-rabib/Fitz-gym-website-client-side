@@ -12,7 +12,8 @@ import GalleryPage from "../Pages/GalleryPage/GalleryPage";
 import Classes from "../Pages/Classes/Classes";
 import Forum from "../Pages/Forum/Forum";
 import PrivateRoute from "./PrivateRoute";
-import BeTrainerPage from "../Pages/BeTrainerPage/BeTrainerPage";
+import BeTrainerPage from "../Pages/BecomeTrainer/BeTrainerPage";
+import BlogPostPage from "../Pages/BlogPostPage/BlogPostPage";
 
   export const router = createBrowserRouter([
     {
@@ -41,6 +42,12 @@ import BeTrainerPage from "../Pages/BeTrainerPage/BeTrainerPage";
         {
             path: 'forum',
             element: <Forum></Forum>
+            
+        },
+        {
+            path: 'blogs/:id',
+            element: <BlogPostPage></BlogPostPage>,
+            loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
             
         },
         {
