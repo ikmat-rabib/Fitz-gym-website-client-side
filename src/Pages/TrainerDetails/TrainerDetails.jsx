@@ -13,6 +13,10 @@ const TrainerDetails = () => {
 
     const { trainerName, age, trainerPic, yearsExp, socialLink, skills, availableTimeInWeek, availableTimeInDay, description } = trainer
 
+     const allSkills = skills.join(', ')
+     const allAvailTimeWeek = availableTimeInWeek.join(', ')
+     const allAvailTimeDay = availableTimeInDay.join(', ')
+
     return (
         <>
             <Helmet>
@@ -23,9 +27,9 @@ const TrainerDetails = () => {
                     <img className="w-1/4 rounded-2xl" src={trainerPic} alt="" />
                     <div className="space-y-3 w-2/4">
                         <h3 className="font-bold text-3xl">{trainerName}</h3>
-                        <p> <span className="font-semibold">Available:</span> {skills+''}.</p>
-                        <p> <span className="font-semibold">Available:</span> {availableTimeInWeek+''}.</p>
-                        <p> <span className="font-semibold">Available:</span> {availableTimeInDay+''}.</p>
+                        <p> <span className="font-semibold">Skills:</span> {allSkills}</p>
+                        <p> <span className="font-semibold">Available Days in Week:</span> {allAvailTimeWeek}.</p>
+                        <p> <span className="font-semibold">Available Slots in a Day:</span> {allAvailTimeDay}.</p>
                         <p><span className="font-semibold">Description:</span> {description}</p>
                         <p><span className="font-semibold">Experience:</span> {yearsExp} years.</p>
                         <p><span className="font-semibold">Age:</span> {age} years.</p>

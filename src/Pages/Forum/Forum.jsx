@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import Container from "../../Components/Container/Container";
 import useBlogs from "../../Hooks/useBlogs";
-import BlogCard from "../../Components/BlogCard/BlogCard";
+// import BlogCard from "../../Components/BlogCard/BlogCard";
+import ForumCard from "../../Components/ForumCard/ForumCard";
 
 
 const Forum = () => {
@@ -19,13 +20,13 @@ const Forum = () => {
                     <p className="font-medium text-slate-200">Update yourself with the recent reading</p>
                 </div>
 
-                <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className=" grid grid-cols-1 gap-10">
                     {
                         blogs.map(blog =>
-                            <BlogCard
+                            <ForumCard
                                 key={blog._id}
                                 blog={blog}
-                            ></BlogCard>)
+                            ></ForumCard>)
                     }
                 </div>
             </Container>

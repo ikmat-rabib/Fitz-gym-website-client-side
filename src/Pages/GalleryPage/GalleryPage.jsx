@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Container from "../../Components/Container/Container";
 import GalleryCard from "../../Components/GalleryCard/GalleryCard";
 import { Helmet } from "react-helmet-async";
@@ -7,11 +7,11 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 
-const getGallery = async ({ pageParams = 0 }) => {
-    const res = await fetch(`http://localhost:5000/gallery?limit=12&offset=${pageParams}`);
+const getGallery = async ({ pageParam = 0 }) => {
+    const res = await fetch(`http://localhost:5000/gallery?limit=12&offset=${pageParam}`);
     const data = await res.json();
 
-    return { ...data, prevOffset: pageParams };
+    return { ...data, prevOffset: pageParam };
 }
 
 
@@ -32,8 +32,10 @@ const GalleryPage = () => {
     console.log(data);
 
     const gallery = data?.pages.reduce((acc, page) => {
-        console.log(page);
-        return [...acc, ...page.gallery]
+
+        console.log(page[0].gallery);
+
+        return [...acc, ...page[0].gallery]
     }, [])
 
     console.log(gallery);
