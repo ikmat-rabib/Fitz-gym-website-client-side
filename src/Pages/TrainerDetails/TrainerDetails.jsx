@@ -3,13 +3,15 @@ import Container from "../../Components/Container/Container";
 import { FaInstagram } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
 import BecomeTrainer from "../../Components/BecomeTrainer/BecomeTrainer";
+import Featured from "../HomePage/Featured/Featured";
+import Blogs from "../HomePage/Blogs/Blogs";
 
 
 const TrainerDetails = () => {
 
     const trainer = useLoaderData()
 
-    const { trainerName, trainerPic, details, availableTime, socialLink, yearsExp } = trainer
+    const { trainerName, age, trainerPic, yearsExp, socialLink, skills, availableTimeInWeek, availableTimeInDay, description } = trainer
 
     return (
         <>
@@ -21,14 +23,18 @@ const TrainerDetails = () => {
                     <img className="w-1/4 rounded-2xl" src={trainerPic} alt="" />
                     <div className="space-y-3 w-2/4">
                         <h3 className="font-bold text-3xl">{trainerName}</h3>
-                        <p> <span className="font-semibold">Available:</span>  {availableTime}.</p>
-                        <p><span className="font-semibold">Description:</span> {details}</p>
+                        <p> <span className="font-semibold">Available:</span> {skills+''}.</p>
+                        <p> <span className="font-semibold">Available:</span> {availableTimeInWeek+''}.</p>
+                        <p> <span className="font-semibold">Available:</span> {availableTimeInDay+''}.</p>
+                        <p><span className="font-semibold">Description:</span> {description}</p>
                         <p><span className="font-semibold">Experience:</span> {yearsExp} years.</p>
+                        <p><span className="font-semibold">Age:</span> {age} years.</p>
                         <p className="flex items-center gap-5"><span className="font-semibold">Social:</span> <Link to={socialLink} className="text-4xl font-bold text-[#219bff]"><FaInstagram className="hover:scale-105"></FaInstagram></Link></p>
                     </div>
                 </div>
             </Container>
             <BecomeTrainer></BecomeTrainer>
+            <Blogs></Blogs>
         </>
     );
 };

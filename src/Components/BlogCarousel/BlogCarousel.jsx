@@ -11,7 +11,7 @@ const BlogCarousel = () => {
                 spaceBetween={30}
                 centeredSlides={true}
                 
-                className="mySwiper mb-24"
+                className="mySwiper "
             >
                 <SwiperSlide >
                     <div className="card card-compact w-96 bg-base-100 shadow-xl">

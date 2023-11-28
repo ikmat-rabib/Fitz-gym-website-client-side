@@ -13,12 +13,13 @@ const BeTrainerPage = () => {
 
         const form = e.target;
 
-        const name = form.name.value;
+        const trainerName = form.trainerName.value;
         const trainer_email = form.trainer_email.value;
         const age = form.age.value;
-        const experience = form.experience.value;
-        const profile_image = form.profile_image.value;
-        const social_link = form.social_link.value;
+        const yearsExp = form.yearsExp.value;
+        const trainerPic = form.trainerPic.value;
+        const socialLink = form.socialLink.value;
+        const description = form.description.value;
 
         const skills = [];
         const skillCheckboxes = form.querySelectorAll('input[name^="skill"]');
@@ -36,9 +37,16 @@ const BeTrainerPage = () => {
             }
         });
 
-        const description = form.description.value;
+        const availableTimeInDay = [];
+        const dayCheckboxes = form.querySelectorAll('input[name^="slot"]');
+        dayCheckboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                availableTimeInDay.push(checkbox.value);
+            }
+        });
 
-        const newTrainer = { name, trainer_email, age, profile_image, experience, social_link, skills, availableTimeInWeek, description };
+
+        const newTrainer = { trainerName, trainer_email, age, trainerPic, yearsExp, socialLink, skills, availableTimeInWeek, availableTimeInDay, description };
 
         // console.log(newTrainer);
 
@@ -74,12 +82,12 @@ const BeTrainerPage = () => {
                 <form onSubmit={handleAddJobs} className="card-body my-16 bg-blue-4">
                     <h2 className="text-3xl font-bold text-center text-white">Become a <span className="text-[#219bff]">Trainer</span></h2>
 
-                    {/* name */}
+                    {/* trainerName */}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-xl font-semibold text-white underline">Full Name:</span>
                         </label>
-                        <input type="text" name="name" placeholder="name" className="input input-bordered text-white" required />
+                        <input type="text" name="trainerName" placeholder="name" className="input input-bordered text-white" required />
                     </div>
 
                     {/* trainer_email */}
@@ -100,31 +108,31 @@ const BeTrainerPage = () => {
                             <input type="text" name="age" placeholder="Age" className="input input-bordered text-white" required />
                         </div>
 
-                        {/* profile_image */}
+                        {/* trainerPic */}
                         <div className="form-control w-1/2">
                             <label className="label">
                                 <span className="label-text text-xl font-semibold text-white underline">Profile Image URL:</span>
                             </label>
-                            <input type="text" name="profile_image" placeholder="Image" className="input input-bordered text-white" required />
+                            <input type="text" name="trainerPic" placeholder="Image" className="input input-bordered text-white" required />
                         </div>
                     </div>
 
                     <div className="flex md:gap-5">
 
-                        {/* experience */}
+                        {/* yearsExp */}
                         <div className="form-control w-1/2">
                             <label className="label">
                                 <span className="label-text text-xl font-semibold text-white underline">Your Experience in Year:</span>
                             </label>
-                            <input type="text" name="experience" placeholder="Experience" className="input input-bordered text-white" required />
+                            <input type="text" name="yearsExp" placeholder="Experience" className="input input-bordered text-white" required />
                         </div>
 
-                        {/* social_link */}
+                        {/* socialLink */}
                         <div className="form-control w-1/2">
                             <label className="label">
                                 <span className="label-text text-xl font-semibold text-white underline">Your Social Profile URL:</span>
                             </label>
-                            <input type="text" name="social_link" placeholder="Social Link" className="input input-bordered text-white" required />
+                            <input type="text" name="socialLink" placeholder="Social Link" className="input input-bordered text-white" required />
                         </div>
                     </div>
 
@@ -185,6 +193,55 @@ const BeTrainerPage = () => {
                         </div>
                     </div>
 
+                    {/* available time in day */}
+                    <div className="form-control  text-white my-4">
+                        <legend className="label-text text-xl font-semibold text-white underline">Your Available Time Slots In A Day:</legend>
+
+                        <div className="flex flex-wrap gap-x-10 gap-y-2 items-center my-2">
+                            <div>
+                                <input type="checkbox" id="slot1" name="slot" value="10am-11am" />
+                                <label htmlFor="slot1"> 10am-11am</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot2" name="slot" value="11am-12pm" />
+                                <label htmlFor="slot2"> 11am-12pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot3" name="slot" value="12pm-01pm" />
+                                <label htmlFor="slot3"> 12pm-01pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot4" name="slot" value="01pm-02pm" />
+                                <label htmlFor="slot4"> 01pm-02pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot5" name="slot" value="02pm-03pm" />
+                                <label htmlFor="slot5"> 02pm-03pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot6" name="slot" value="03m-04pm" />
+                                <label htmlFor="slot6"> 03m-04pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot7" name="slot" value="04pm-05pm" />
+                                <label htmlFor="slot7"> 04pm-05pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot8" name="slot" value="05pm-06pm" />
+                                <label htmlFor="slot8"> 05pm-06pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot9" name="slot" value="06pm-07pm" />
+                                <label htmlFor="slot9"> 06pm-07pm</label><br />
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slot10" name="slot" value="07pm-08pm" />
+                                <label htmlFor="slot10"> 07pm-08pm</label><br />
+                            </div>
+                        </div>
+
+                    </div>
+
                     {/* description */}
                     <div className="form-control">
                         <label className="label">
@@ -205,44 +262,3 @@ const BeTrainerPage = () => {
 
 
 export default BeTrainerPage;
-
-
-
-
-
- {/* available time in day */}
-                    {/* <div className="form-control  text-white my-4">
-                        <legend className="label-text text-xl font-semibold text-white underline">Your Available Time In A Day:</legend>
-
-                        <div className="flex gap-10 my-2">
-                            <div>
-                                <input type="checkbox" id="saturday" name="saturday" value="saturday" />
-                                <label htmlFor="saturday"> Saturday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="sunday" name="sunday" value="sunday" />
-                                <label htmlFor="sunday"> Sunday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="monday" name="monday" value="monday" />
-                                <label htmlFor="monday"> Monday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="tuesday" name="tuesday" value="tuesday" />
-                                <label htmlFor="tuesday"> Tuesday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="wednesday" name="wednesday" value="wednesday" />
-                                <label htmlFor="wednesday"> Wednesday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="thursday" name="thursday" value="thursday" />
-                                <label htmlFor="thursday"> Thursday</label><br />
-                            </div>
-                            <div>
-                                <input type="checkbox" id="friday" name="friday" value="friday" />
-                                <label htmlFor="friday"> Friday</label><br />
-                            </div>
-                        </div>
-
-                    </div> */}

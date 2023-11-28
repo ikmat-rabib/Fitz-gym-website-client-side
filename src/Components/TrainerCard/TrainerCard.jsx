@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const TrainerCard = ({ trainer }) => {
 
-    const { trainerName, trainerPic, availableTime, socialLink, yearsExp, _id } = trainer
+    const { trainerName, trainerPic, socialLink, yearsExp, availableTimeInDay, _id } = trainer
 
     return (
         <>
@@ -14,7 +14,7 @@ const TrainerCard = ({ trainer }) => {
                 </figure>
                 <div className="card-body w-full items-center  space-y-3 text-white absolute bottom-[0px] rounded-b-2xl bg-slate-700 bg-opacity-60 md:hidden group-hover:block">
                     <h2 className="text-3xl font-semibold text-center text-white ">{trainerName}</h2>
-                    <p className="font-medium text-center underline">{availableTime}</p>
+                    <p className="font-medium text-center ">{availableTimeInDay+""}</p>
                     <p className="text-center"> Years of Experience: {yearsExp}</p>
                     <div className="flex justify-between items-center">
                         <Link to={`/trainers/${_id}`} state={{ trainer }}>
