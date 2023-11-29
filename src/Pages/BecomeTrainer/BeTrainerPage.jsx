@@ -163,11 +163,11 @@ const BeTrainerPage = () => {
 
                         <div className="flex gap-10 my-2">
                             <div>
-                                <input type="checkbox" id="dSaturday" name="availableTimeInWeek" value="Saturday" />
+                                <input type="checkbox" id="saturday" name="availableTimeInWeek" value="Saturday" />
                                 <label htmlFor="saturday"> Saturday</label><br />
                             </div>
                             <div>
-                                <input type="checkbox" id="dSunday" name="availableTimeInWeek" value="Sunday" />
+                                <input type="checkbox" id="sunday" name="availableTimeInWeek" value="Sunday" />
                                 <label htmlFor="sunday"> Sunday</label><br />
                             </div>
                             <div>
@@ -175,19 +175,19 @@ const BeTrainerPage = () => {
                                 <label htmlFor="monday"> Monday</label><br />
                             </div>
                             <div>
-                                <input type="checkbox" id="dTuesday" name="availableTimeInWeek" value="Tuesday" />
+                                <input type="checkbox" id="tuesday" name="availableTimeInWeek" value="Tuesday" />
                                 <label htmlFor="tuesday"> Tuesday</label><br />
                             </div>
                             <div>
-                                <input type="checkbox" id="dWednesday" name="availableTimeInWeek" value="Wednesday" />
+                                <input type="checkbox" id="wednesday" name="availableTimeInWeek" value="Wednesday" />
                                 <label htmlFor="wednesday"> Wednesday</label><br />
                             </div>
                             <div>
-                                <input type="checkbox" id="dThursday" name="availableTimeInWeek" value="Thursday" />
+                                <input type="checkbox" id="thursday" name="availableTimeInWeek" value="Thursday" />
                                 <label htmlFor="thursday"> Thursday</label><br />
                             </div>
                             <div>
-                                <input type="checkbox" id="dFriday" name="availableTimeInWeek" value="Friday" />
+                                <input type="checkbox" id="friday" name="availableTimeInWeek" value="Friday" />
                                 <label htmlFor="friday"> Friday</label><br />
                             </div>
                         </div>

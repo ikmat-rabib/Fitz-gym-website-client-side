@@ -29,7 +29,7 @@ const TrainerDetails = () => {
                         <h3 className="font-bold text-3xl">{trainerName}</h3>
                         <p> <span className="font-semibold">Skills:</span> {allSkills}</p>
                         <p> <span className="font-semibold">Available Days in Week:</span> {allAvailTimeWeek}.</p>
-                        <p> <span className="font-semibold">Available Slots in a Day:</span> {allAvailTimeDay}.</p>
+                        <p> <span className="font-semibold">Available Slots in a Day:</span> <Link>{allAvailTimeDay}</Link>.</p>
                         <p><span className="font-semibold">Description:</span> {description}</p>
                         <p><span className="font-semibold">Experience:</span> {yearsExp} years.</p>
                         <p><span className="font-semibold">Age:</span> {age} years.</p>

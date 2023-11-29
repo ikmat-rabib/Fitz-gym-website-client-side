@@ -26,16 +26,9 @@ const GalleryPage = () => {
         }
     })
 
-    // console.log(data);
-
     const gallery = data?.pages.reduce((acc, page) => {
-
-        // console.log(page[0].gallery);
-
         return [...acc, ...page[0].gallery]
     }, [])
-
-    // console.log(gallery);
 
     return (
         <>

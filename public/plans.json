@@ -1,0 +1,26 @@
+[
+    {
+      "_id": 1,
+      "name": "Silver",
+      "description": "Basic plan with essential features",
+      "classes": ["Cardio", "Yoga"],
+      "facilities": ["Gym access", "Locker room", "Showers"],
+      "price": 29.99
+    },
+    {
+      "_id": 2,
+      "name": "Gold",
+      "description": "Intermediate plan with additional benefits",
+      "classes": ["Cardio", "Yoga", "Weightlifting", "Spin"],
+      "facilities": ["Gym access", "Locker room", "Showers", "Sauna"],
+      "price": 49.99
+    },
+    {
+      "_id": 3,
+      "name": "Diamond",
+      "description": "Premium plan with all features",
+      "classes": ["Cardio", "Yoga", "Weightlifting", "Spin"],
+      "facilities": ["Gym access", "Locker room", "Showers", "Sauna", "Personal Trainer"],
+      "price": 79.99
+    }
+  ]

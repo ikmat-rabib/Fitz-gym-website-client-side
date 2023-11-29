@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Yoga",
+    "description": "Improve flexibility, strength, and relaxation through a series of poses and controlled breathing.",
+    "trainer": "Mia Turner",
+    "slot": "Morning",
+    "featured": false,
+    "day": "Monday"
+  },
+  {
+    "name": "Kickboxing",
+    "description": "Cardiovascular and strength training through martial arts-inspired moves.",
+    "trainer": "Ryan Smith",
+    "slot": "Afternoon",
+    "featured": false,
+    "day": "Tuesday"
+  },
+  {
+    "name": "HIIT (High-Intensity Interval Training)",
+    "description": "Short bursts of intense exercise alternated with periods of rest for efficient calorie burning and improved cardiovascular health.",
+    "trainer": "Alex Johnson",
+    "slot": "Evening",
+    "featured": false,
+    "day": "Wednesday"
+  },
+  {
+    "name": "Pilates",
+    "description": "Focus on core strength, flexibility, and overall body awareness.",
+    "trainer": "Olivia Davis",
+    "slot": "Morning",
+    "featured": true,
+    "day": "Thursday"
+  },
+  {
+    "name": "Zumba",
+    "description": "Dance-based workout with energetic music to improve cardiovascular fitness.",
+    "trainer": "Carlos Rodriguez",
+    "slot": "Afternoon",
+    "featured": true,
+    "day": "Friday"
+  },
+  {
+    "name": "Cycling",
+    "description": "Indoor cycling class for a high-intensity cardiovascular workout.",
+    "trainer": "Emily White",
+    "slot": "Evening",
+    "featured": true,
+    "day": "Saturday"
+  },
+  {
+    "name": "Strength Training",
+    "description": "Build muscle and increase overall strength with a variety of resistance exercises.",
+    "trainer": "Jacob Brown",
+    "slot": "Morning",
+    "featured": false,
+    "day": "Sunday"
+  },
+  {
+    "name": "Yogalates",
+    "description": "Combine elements of yoga and Pilates for a balanced workout.",
+    "trainer": "Sophia Lee",
+    "slot": "Afternoon",
+    "featured": false,
+    "day": "Monday"
+  },
+  {
+    "name": "Boxing Fitness",
+    "description": "Full-body workout incorporating boxing techniques and conditioning drills.",
+    "trainer": "Gabriel Martinez",
+    "slot": "Evening",
+    "featured": false,
+    "day": "Tuesday"
+  },
+  {
+    "name": "Dance Cardio",
+    "description": "Fun and energetic dance routines to boost cardiovascular health.",
+    "trainer": "Isabella Taylor",
+    "slot": "Morning",
+    "featured": true,
+    "day": "Wednesday"
+  },
+  {
+    "name": "Functional Training",
+    "description": "Focus on functional movements to improve everyday activities and overall fitness.",
+    "trainer": "Nathan Anderson",
+    "slot": "Afternoon",
+    "featured": true,
+    "day": "Thursday"
+  },
+  {
+    "name": "Mindful Stretch",
+    "description": "Gentle stretching and mindfulness exercises for relaxation and flexibility.",
+    "trainer": "Emma Wilson",
+    "slot": "Evening",
+    "featured": true,
+    "day": "Friday"
+  }
+]
