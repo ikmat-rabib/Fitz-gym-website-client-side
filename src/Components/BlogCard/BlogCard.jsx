@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 
 
 const BlogCard = ({ blog }) => {
@@ -17,11 +15,11 @@ const BlogCard = ({ blog }) => {
                     <div className="h-[3px] w-full bg-[#219bff] max-w-full"></div>
                     <div className="card-actions justify-between ">
                         <p>Author: {author}</p>
-                        <p>{date}</p>
+                        <p className="text-end">{date}</p>
 
-                        <Link to={`/blogs/${_id}`} state={{ blog }}>
+                        {/* <Link to={`/blogs/${_id}`} state={{ blog }}>
                             <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">read this post</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

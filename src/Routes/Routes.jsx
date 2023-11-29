@@ -41,13 +41,14 @@ import BlogPostPage from "../Pages/BlogPostPage/BlogPostPage";
         },
         {
             path: 'forum',
-            element: <Forum></Forum>
-            
+            element: <Forum></Forum>,
+            loader: () => fetch('http://localhost:5000/blogCount')
         },
         {
             path: 'blogs/:id',
             element: <BlogPostPage></BlogPostPage>,
             loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
+            
             
         },
         {

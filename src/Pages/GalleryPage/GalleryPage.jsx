@@ -6,7 +6,6 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-
 const getGallery = async ({ pageParam = 0 }) => {
     const res = await fetch(`http://localhost:5000/gallery?limit=12&offset=${pageParam}`);
     const data = await res.json();
@@ -14,31 +13,29 @@ const getGallery = async ({ pageParam = 0 }) => {
     return { ...data, prevOffset: pageParam };
 }
 
-
 const GalleryPage = () => {
-
 
     const { data, fetchNextPage, hasNextPage } = useInfiniteQuery({
         queryKey: ['gallery'],
         queryFn: getGallery,
         getNextPageParam: (lastPage) => {
             if (lastPage.prevOffset + 12 > lastPage.galleryCount) {
-                return false;
+                return null;
             }
-            return lastPage.prevOffset + 12
+            return lastPage.prevOffset + 12;
         }
     })
 
-    console.log(data);
+    // console.log(data);
 
     const gallery = data?.pages.reduce((acc, page) => {
 
-        console.log(page[0].gallery);
+        // console.log(page[0].gallery);
 
         return [...acc, ...page[0].gallery]
     }, [])
 
-    console.log(gallery);
+    // console.log(gallery);
 
     return (
         <>
@@ -60,11 +57,11 @@ const GalleryPage = () => {
                 loader={<span className="loading loading-ring loading-lg"></span>}
             >
                 <Container>
-                    <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {gallery &&
                             gallery.map(gImage =>
                                 <GalleryCard
-                                    key={gImage._id}
+                                    key={gImage}
                                     gImage={gImage}
                                 ></GalleryCard>)
                         }
