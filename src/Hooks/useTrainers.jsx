@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "./useAxiosSecure";
+
 
 
 const useTrainers = () => {
-    const [trainers, setTrainers] = useState([])
-    const [loading, setLoading] = useState(true)
+    const axiosSecure = useAxiosSecure()
 
-    useEffect(() => {
-        fetch('http://localhost:5000/trainers')
-            .then(res => res.json())
-            .then(data => {
-                setTrainers(data)
-                setLoading(false)
-            })
-    }, [])
-    return [trainers, loading]
+    const { data: trainers = [] } = useQuery({
+        queryKey: ['trainers'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/trainers')
+            return res.data
+        }
+    })
+    return [trainers]
 };
 
 export default useTrainers;

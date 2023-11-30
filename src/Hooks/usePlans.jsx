@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "./useAxiosSecure";
+
 
 
 const usePlans = () => {
-    const [plans, setPlans] = useState([])
-    const [loading, setLoading] = useState(true)
+    const axiosSecure = useAxiosSecure()
 
-    useEffect(() => {
-        fetch('plans.json')
-            .then(res => res.json())
-            .then(data => {
-                setPlans(data)
-                setLoading(false)
-            })
-    }, [])
-    return [plans, loading]
+    const { data: plans = [] } = useQuery({
+        queryKey: ['plans'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/plans')
+            return res.data
+        }
+    })
+    return [plans]
 };
 
 export default usePlans;

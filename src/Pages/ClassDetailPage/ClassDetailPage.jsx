@@ -10,13 +10,10 @@ const ClassDetailPage = () => {
     const [trainerData] = useTrainers()
 
     const { name, description, trainer, slot, featured, image, day, _id } = allClasses
-
-    
     
     const matchingTrainers = trainerData.filter((taeget) => taeget.trainerName === trainer);
     const trainerIds = matchingTrainers.map((taeget) => taeget._id);
     
-
     console.log(trainerIds);
 
     return (
@@ -41,8 +38,8 @@ const ClassDetailPage = () => {
 
 
 
-                <Link to={`/trainers/${trainerIds}`} >
-                    <button className="btn  bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">Details</button>
+                <Link className="flex justify-center" to={`/trainers/${trainerIds}`} >
+                    <button className="btn  bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">see trainer details</button>
                 </Link>
             </Container>
         </>

@@ -17,6 +17,8 @@ import BlogPostPage from "../Pages/BlogPostPage/BlogPostPage";
 import Booking from "../Pages/Booking/Booking";
 import Payment from "../Pages/Payment/Payment";
 import ClassDetailPage from "../Pages/ClassDetailPage/ClassDetailPage";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import AllSubscriber from "../Pages/Dashboard/AllSubscriber/AllSubscriber";
 
 export const router = createBrowserRouter([
   {
@@ -82,4 +84,26 @@ export const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute> ,
+    children: [
+      {
+        path: "/dashboard/allSubacriber",
+        element: <AllSubscriber></AllSubscriber>
+      },
+      {
+        path: "/dashboard/allTrainers",
+        element: <AllSubscriber></AllSubscriber>
+      },
+      {
+        path: "/dashboard/appliedTrainers",
+        element: <AllSubscriber></AllSubscriber>
+      },
+      {
+        path: "/dashboard/balance",
+        element: <AllSubscriber></AllSubscriber>
+      },
+    ]
+  }
 ]);

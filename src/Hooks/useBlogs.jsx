@@ -1,19 +1,22 @@
-import { useEffect, useState } from "react";
+
+import useAxiosSecure from "./useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
 
 
 const useBlogs = () => {
-    const [blogs, setBlogs] = useState([])
-    const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        fetch('http://localhost:5000/blogs')
-            .then(res => res.json())
-            .then(data => {
-                setBlogs(data)
-                setLoading(false)
-            })
-    }, [])
-    return [blogs, loading]
+
+    const axiosSecure = useAxiosSecure()
+
+    const { data: blogs = [] } = useQuery({
+        queryKey: ['blogs'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/blogs')
+            return res.data
+        }
+    })
+    return [blogs]
+
 };
 
 export default useBlogs;

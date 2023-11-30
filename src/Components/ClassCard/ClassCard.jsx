@@ -14,11 +14,11 @@ const ClassCard = ({ classCard }) => {
                 <div className="card-body p-6 items-center text-white text-center">
                     <div className="flex items-center gap-1">
                         <h2 className="card-title">{name}</h2>
-                        <div className="badge badge-info h-auto border-0">
+                        {/* <div className="badge badge-info h-auto border-0">
                             {
                                 featured ? 'Featured' : <></>
                             }
-                        </div>
+                        </div> */}
                     </div>
                     <p className="text-justify">{description}</p>
                     <p className="text-start">Trainer: <span className="font-semibold">{trainer}</span></p>

@@ -1,10 +1,13 @@
 import Swal from "sweetalert2";
 import Container from "../../../Components/Container/Container";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const Newsletter = () => {
 
-    const handleSubscribe = e => {
+    const axiosSecure = useAxiosSecure()
+
+    const handleSubscribe = async e => {
         e.preventDefault();
 
         const form = e.target;
@@ -16,27 +19,22 @@ const Newsletter = () => {
 
         console.log(newNewsletter);
 
-        fetch('http://localhost:5000/newsletter', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newNewsletter)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Successfully Subscribed to our Newsletter',
-                        icon: 'success',
-                        confirmButtonText: 'Cool'
-                    })
-                }
-            })
+        const res = await axiosSecure.post('http://localhost:5000/newsletter', newNewsletter);
 
-    }
+        const data = res.data;
+        console.log(data);
+
+        if (data.insertedId) {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Successfully Subscribed to our Newsletter',
+                icon: 'success',
+                confirmButtonText: 'Cool',
+            });
+        }
+    };
+
+   
 
     return (
         <div className="bg-[#0167BB]">
