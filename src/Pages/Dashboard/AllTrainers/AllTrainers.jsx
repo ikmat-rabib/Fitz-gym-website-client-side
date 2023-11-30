@@ -3,12 +3,12 @@ import useTrainers from "../../../Hooks/useTrainers";
 
 const AllTrainers = () => {
 
-    const [trainers] useTrainers()
+    const [trainers] = useTrainers()
 
     return (
         <div>
             <div className="w-2/5 mx-auto bg-red-500 my-3 rounded-lg">
-                <h2 className="text-2xl text-center font-semibold py-3">Total Subscribers: {newsletter.length}</h2>
+                <h2 className="text-2xl text-center font-semibold py-3">Total Trainer: {trainers.length}</h2>
             </div>
             <div className="overflow-x-auto">
                 <table className="table w-3/5 mx-auto text-white">
@@ -22,11 +22,11 @@ const AllTrainers = () => {
                     </thead>
                     <tbody>
                         {
-                            newsletter.map((item, idx) => <tr className="text-" key={item._id}>
+                            trainers.map((item, idx) => <tr className="text-" key={item._id}>
 
                                 <td>{idx+1}</td>
-                                <td>{item.name}</td>
-                                <td>{item.email}</td>
+                                <td>{item.trainerName}</td>
+                                <td>{item.trainer_email}</td>
                             </tr>)
                         }
                     </tbody>

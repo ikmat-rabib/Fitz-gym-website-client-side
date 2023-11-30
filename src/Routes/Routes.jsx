@@ -19,6 +19,7 @@ import Payment from "../Pages/Payment/Payment";
 import ClassDetailPage from "../Pages/ClassDetailPage/ClassDetailPage";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import AllSubscriber from "../Pages/Dashboard/AllSubscriber/AllSubscriber";
+import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 
 export const router = createBrowserRouter([
   {
@@ -94,7 +95,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard/allTrainers",
-        element: <AllSubscriber></AllSubscriber>
+        element: <AllTrainers></AllTrainers>
       },
       {
         path: "/dashboard/appliedTrainers",
