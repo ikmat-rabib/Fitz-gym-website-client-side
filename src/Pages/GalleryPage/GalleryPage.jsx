@@ -7,7 +7,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 const getGallery = async ({ pageParam = 0 }) => {
-    const res = await fetch(`http://localhost:5000/gallery?limit=12&offset=${pageParam}`);
+    const res = await fetch(`https://assignment-12-server-seven-neon.vercel.app/gallery?limit=12&offset=${pageParam}`);
     const data = await res.json();
 
     return { ...data, prevOffset: pageParam };
@@ -79,7 +79,7 @@ export default GalleryPage;
 // const [loading, setLoading] = useState(true)
 
 // useEffect(() => {
-//     fetch('http://localhost:5000/gallery')
+//     fetch('https://assignment-12-server-seven-neon.vercel.app/gallery')
 //         .then(res => res.json())
 //         .then(data => {
 //             setGallery(data)

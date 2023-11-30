@@ -1,12 +1,12 @@
-import useNewsletter from "../../../Hooks/useNewsletter";
+import useTrainers from "../../../Hooks/useTrainers";
 
 
-const AllSubscriber = () => {
+const AllTrainers = () => {
 
-    const [newsletter] = useNewsletter()
+    const [trainers] useTrainers()
 
     return (
-        <>
+        <div>
             <div className="w-2/5 mx-auto bg-red-500 my-3 rounded-lg">
                 <h2 className="text-2xl text-center font-semibold py-3">Total Subscribers: {newsletter.length}</h2>
             </div>
@@ -15,8 +15,9 @@ const AllSubscriber = () => {
                     <thead className=" ">
                         <tr className="bg-blue-700 text-white">
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Job</th>
+                            <th>Trainer Name</th>
+                            <th>Trainer Email</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -31,8 +32,8 @@ const AllSubscriber = () => {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 };
 
-export default AllSubscriber;
+export default AllTrainers;

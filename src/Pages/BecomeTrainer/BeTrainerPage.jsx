@@ -50,7 +50,7 @@ const BeTrainerPage = () => {
 
         // console.log(newTrainer);
 
-        fetch('http://localhost:5000/be-trainer', {
+        fetch('https://assignment-12-server-seven-neon.vercel.app/be-trainer', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -45,17 +45,17 @@ export const router = createBrowserRouter([
       {
         path: 'classes/:id',
         element: <ClassDetailPage></ClassDetailPage>,
-        loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-12-server-seven-neon.vercel.app/classes/${params.id}`)
       },
       {
         path: 'forum',
         element: <Forum></Forum>,
-        loader: () => fetch('http://localhost:5000/blogCount')
+        loader: () => fetch('https://assignment-12-server-seven-neon.vercel.app/blogCount')
       },
       {
         path: 'blogs/:id',
         element: <BlogPostPage></BlogPostPage>,
-        loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-12-server-seven-neon.vercel.app/blogs/${params.id}`)
       },
       {
         path: 'login',
@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
       {
         path: 'trainers/:id',
         element: <TrainerDetails></TrainerDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/trainers/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-12-server-seven-neon.vercel.app/trainers/${params.id}`)
       },
       {
         path: 'be-trainer',

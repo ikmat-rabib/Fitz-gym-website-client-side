@@ -7,7 +7,7 @@ import useNewsletter from "../../../Hooks/useNewsletter";
 const Newsletter = () => {
 
     const axiosSecure = useAxiosSecure()
-    const [, refetch] = useNewsletter
+    const [ , refetch] = useNewsletter()
 
     const handleSubscribe = async e => {
         e.preventDefault();
@@ -21,7 +21,7 @@ const Newsletter = () => {
 
         console.log(newNewsletter);
 
-        const res = await axiosSecure.post('http://localhost:5000/newsletter', newNewsletter);
+        const res = await axiosSecure.post('https://assignment-12-server-seven-neon.vercel.app/newsletter', newNewsletter);
 
         const data = res.data;
         console.log(data);

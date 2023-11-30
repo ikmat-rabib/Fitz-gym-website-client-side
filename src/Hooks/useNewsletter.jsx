@@ -4,8 +4,6 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 
 
-
-
 const useNewsletter = () => {
     
     const auth = useContext(AuthContext);
