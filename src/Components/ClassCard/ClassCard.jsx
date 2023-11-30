@@ -7,7 +7,7 @@ const ClassCard = ({ classCard }) => {
 
     return (
         <>
-            <div className="card border border-[#219bff] hover:scale-105 shadow-xl">
+            <div className="card border border-[#219bff] hover:scale-105 shadow-xl ">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="" className="rounded-xl" />
                 </figure>

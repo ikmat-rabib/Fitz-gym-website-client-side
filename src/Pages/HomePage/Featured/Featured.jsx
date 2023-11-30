@@ -21,7 +21,7 @@ const Featured = () => {
                     <p className="font-medium text-slate-200">Explore our incredible features.</p>
                 </div>
 
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-3 gap-8">
                     {
                         featured.map(item => <FeaturesCard key={item.id} item={item}></FeaturesCard>)
                     }

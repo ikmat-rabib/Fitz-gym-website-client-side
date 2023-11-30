@@ -17,26 +17,20 @@ const BlogPostPage = () => {
                 <title>FitZ | Forum Post</title>
             </Helmet>
             <Container>
-                <div className="grid grid-cols-11 ">
+                <div className="md:grid md:grid-cols-11 flex-col">
 
                     <div className="col-span-9">
                         <h3 className="font-bold text-3xl text-center ">{title}</h3>
-                        {/* <div className="flex justify-center items-center gap-11 my-5">
-                            <p> <span className="font-semibold">Author:</span>  {author}.</p>
-                            <p><span className="font-semibold">Date:</span> {date}</p>
-                        </div> */}
                         <div className="w-11/12 mx-auto space-y-4 my-10">
-                            <img className="w-1/4 rounded-2xl float-left mr-3 mb-" src={image} alt="" />
+                            <img className="md:w-1/4 rounded-2xl md:float-left mr-3 mb-" src={image} alt="" />
                             <p className="text-justify"><span className="font-semibold"></span> {content}</p>
-                            <p className="flex justify-end items-center gap-5">
-                                {/* <button className="text-4xl font-bold text-[#219bff]"><FaThumbsUp className="hover:scale-110"></FaThumbsUp></button>
-                                <button className="text-4xl font-bold text-red-600"><FaThumbsDown className="hover:scale-90"></FaThumbsDown></button> */}
+                            <p className="flex justify-center md:justify-end items-center gap-5">
                                 <LikeDislikeButton></LikeDislikeButton>
                             </p>
                         </div>
                     </div>
 
-                    <div className="col-span-2 md:pt-10">
+                    <div className="col-span-2 px-3 md:px-0 md:pt-10">
                         <h3 className="font-bold text-lg text-center underline">Know The Author</h3>
                         <div className="space-y-1">
                             <p><span className="font-semibold">Author:</span> {author}.</p>

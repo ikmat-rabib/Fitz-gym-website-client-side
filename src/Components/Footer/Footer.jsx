@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-[#0167BB] text-white">
                 <aside>
                     <img className="w-14 dark:invert" src="/0vQ0BO-LogoMakr.png" alt="" />
-                    <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p>FitZ ltd.<br />Shape for the future</p>
                 </aside>
                 <nav>
                     <header className="footer-title">Services</header>

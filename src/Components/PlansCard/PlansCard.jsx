@@ -12,8 +12,6 @@ const PlansCard = ({ plan }) => {
     return (
         <div className="card glass shadow-xl">
             <div className="card-body p-0 items-center  text-white">
-                {/* <h2 className="card-title text-5xl bg-[#219bff] my-5">{name}</h2>
-                <p className="text-slate-300">{description}</p> */}
                 <div className="w-full text-center relative rounded-t-2xl space-y-5 bg-[#0167BB] py-8">
                     <h2 className=" text-5xl ">{name}</h2>
                     <p className="text-slate-100">{description}</p>
@@ -38,7 +36,6 @@ const PlansCard = ({ plan }) => {
                 </div>
                 <div className="space-y-4 my-5 px-8">
 
-                    {/* <div className="w-1/5 h-[3px] bg-[#219bff]"></div> */}
                     <p>Classes: {allClasses}</p>
                     <div className="w-1/5 h-[3px] bg-[#219bff]"></div>
                     <p>Facilities: {allFacilities}</p>
@@ -47,7 +44,7 @@ const PlansCard = ({ plan }) => {
                     <div className="w-1/5 h-[3px] bg-[#219bff]"></div>
                 </div>
                 <Link to={`/payment`} state={{ plan }}>
-                            <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-105 hover:-skew-x-12 border-0 mb-8">Know More</button>
+                            <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-105 hover:-skew-x-12 border-0 mb-8">join now</button>
                         </Link>
             </div>
         </div>

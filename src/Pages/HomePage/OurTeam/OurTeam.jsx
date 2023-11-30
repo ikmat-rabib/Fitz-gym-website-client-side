@@ -16,7 +16,7 @@ const OurTeam = () => {
                     <p className="font-medium text-slate-200">We have the best Trainers around here</p>
                 </div>
 
-                <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-3 md:p-0 gap-8">
                     {
                         trainers.map(trainer =>
                             <TrainerCard

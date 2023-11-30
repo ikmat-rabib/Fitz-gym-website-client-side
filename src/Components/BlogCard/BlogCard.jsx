@@ -2,13 +2,13 @@
 
 const BlogCard = ({ blog }) => {
 
-    const { title, author, date, image, _id} = blog
+    const { title, author, date, image, _id } = blog
 
     // const shortContent = content.length > 120 ? `${content.slice(0, 120)}...` : content;
 
     return (
         <>
-            <div className="card card-compact  bg-base-100 shadow-xl">
+            <div className="card card-compact w-full bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body text-white">
                     <h2 className="card-title text-justify">{title}</h2>
@@ -16,10 +16,6 @@ const BlogCard = ({ blog }) => {
                     <div className="card-actions justify-between ">
                         <p>Author: {author}</p>
                         <p className="text-end">{date}</p>
-
-                        {/* <Link to={`/blogs/${_id}`} state={{ blog }}>
-                            <button className="btn bg-[#0167BB] hover:bg-[#219bff] text-white rounded-md uppercase hover:scale-110 hover:-skew-x-12 border-0">read this post</button>
-                        </Link> */}
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const [blogData] = useBlogs()
                 spaceBetween={30}
                 centeredSlides={true}
                 
-                className="mySwiper "
+                // className="mySwiper w-full"
                 
             >
                 {
