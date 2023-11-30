@@ -1,11 +1,13 @@
 import Swal from "sweetalert2";
 import Container from "../../../Components/Container/Container";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import useNewsletter from "../../../Hooks/useNewsletter";
 
 
 const Newsletter = () => {
 
     const axiosSecure = useAxiosSecure()
+    const [, refetch] = useNewsletter
 
     const handleSubscribe = async e => {
         e.preventDefault();
@@ -31,6 +33,7 @@ const Newsletter = () => {
                 icon: 'success',
                 confirmButtonText: 'Cool',
             });
+            refetch()
         }
     };
 
