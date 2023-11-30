@@ -1,27 +1,23 @@
-import { Link, useLoaderData } from "react-router-dom";
-import Container from "../../Components/Container/Container";
-import { FaInstagram } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
-import BecomeTrainer from "../../Components/BecomeTrainer/BecomeTrainer";
-import Blogs from "../HomePage/Blogs/Blogs";
+import Container from "../../Components/Container/Container";
+import useClasses from "../../Hooks/useClasses";
+import { useLoaderData } from "react-router-dom";
 
 
-const TrainerDetails = () => {
-
-    const trainer = useLoaderData()
-
-    const { trainerName, age, trainerPic, yearsExp, socialLink, skills, availableTimeInWeek, availableTimeInDay, description } = trainer
-
-     const allSkills = skills.join(', ')
-     const allAvailTimeWeek = availableTimeInWeek.join(', ')
-     const allAvailTimeDay = availableTimeInDay.join(', ')
+const ClassDetailPage = () => {
+    
+    const allClasses = useLoaderData()
 
     return (
         <>
             <Helmet>
-                <title>FitZ | Trainer Details</title>
+                <title>FitZ | Class Detail</title>
             </Helmet>
             <Container>
+                <div className="text-center space-y-2 my-10">
+                    <h3 className="text-4xl font-bold text-white">Our All <span className="text-[#219bff]">Classes</span></h3>
+                    <p className="font-medium text-slate-200">Find yourself the best classes suits you</p>
+                </div>
                 <div className="text-le flex justify-evenly items-center space-y-4 my-10">
                     <img className="w-1/4 rounded-2xl" src={trainerPic} alt="" />
                     <div className="space-y-3 w-2/4">
@@ -36,10 +32,8 @@ const TrainerDetails = () => {
                     </div>
                 </div>
             </Container>
-            <BecomeTrainer></BecomeTrainer>
-            <Blogs></Blogs>
         </>
     );
 };
 
-export default TrainerDetails;
+export default ClassDetailPage;

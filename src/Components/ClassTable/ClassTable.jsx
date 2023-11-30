@@ -10,7 +10,7 @@ const ClassTable = () => {
 
     return (
         <>
-            <table className="glass rounded-b-2xl w-5/6 mx-auto" border="2">
+            <table className="glass w-5/6 mx-auto shadow-xl" border="2">
                 <thead className="bg-[#219bff] text-white m-5">
                     <tr className="">
                         <th className=" py-3 text-center">Day vs Time</th>
@@ -24,7 +24,7 @@ const ClassTable = () => {
                         <tr key={day}>
                             <td className="py-3 text-white text-center">{day}</td>
                             {timeSlots.map(slot => (
-                                <td className="text-center border-b-2" key={slot}>
+                                <td className="text-center border-r border-b-2 text-slate-50" key={slot}>
                                     {classes
                                         .filter(item => item.day === day && item.slot === slot).map(item => item.name).join(', ')}
                                 </td>
@@ -33,7 +33,6 @@ const ClassTable = () => {
                     ))}
                 </tbody>
             </table>
-{/* <h3 className="text-2xl font-semibold text-white text-center my-3">The <span className="text-[#219bff]">Schedule</span></h3> */}
         </>
     );
 };

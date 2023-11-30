@@ -5,7 +5,8 @@
     "trainer": "Mia Turner",
     "slot": "10am-11am",
     "featured": false,
-    "day": "Monday"
+    "day": "Monday",
+    "image": "https://i.ibb.co/Ky4bjYN/Yoga.jpg"
   },
   {
     "name": "Zumba",
@@ -13,7 +14,8 @@
     "trainer": "Mia Turner",
     "slot": "06pm-07pm",
     "featured": true,
-    "day": "Saturday"
+    "day": "Saturday",
+    "image": "https://i.ibb.co/3WtN7wz/Zumba.jpg"
   },
   {
     "name": "Strength Training",
@@ -21,7 +23,8 @@
     "trainer": "Alex Johnson",
     "slot": "06pm-07pm",
     "featured": false,
-    "day": "Sunday"
+    "day": "Sunday",
+    "image": "https://i.ibb.co/Gn6S5yJ/Strength-Training.jpg"
   },
   {
     "name": "Kickboxing",
@@ -29,7 +32,8 @@
     "trainer": "Alex Johnson",
     "slot": "10am-11am",
     "featured": false,
-    "day": "Tuesday"
+    "day": "Tuesday",
+    "image": "https://i.ibb.co/9tXMSTp/Kickboxing.jpg"
   },
   {
     "name": "Pilates",
@@ -37,15 +41,17 @@
     "trainer": "Ryan Smith",
     "slot": "06pm-07pm",
     "featured": true,
-    "day": "Saturday"
+    "day": "Saturday",
+    "image": "https://i.ibb.co/93xzFVz/Pilates.jpg"
   },
   {
     "name": "Functional Training",
     "description": "Focus on functional movements to improve everyday activities and overall fitness.",
     "trainer": "Ryan Smith",
-    "slot":"06pm-07pm",
+    "slot": "06pm-07pm",
     "featured": true,
-    "day": "Monday"
+    "day": "Monday",
+    "image": "https://i.ibb.co/6rTLhJL/Functional-Training.jpg"
   },
   {
     "name": "Mindful Stretch",
@@ -53,6 +59,7 @@
     "trainer": "Ryan Smith",
     "slot": "10am-11am",
     "featured": true,
-    "day": "Sunday"
+    "day": "Sunday",
+    "image": "https://i.ibb.co/3hmpKL1/Mindful-Stretch.jpg"
   }
 ]

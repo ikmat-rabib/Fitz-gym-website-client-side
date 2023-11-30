@@ -16,6 +16,7 @@ import BeTrainerPage from "../Pages/BecomeTrainer/BeTrainerPage";
 import BlogPostPage from "../Pages/BlogPostPage/BlogPostPage";
 import Booking from "../Pages/Booking/Booking";
 import Payment from "../Pages/Payment/Payment";
+import ClassDetailPage from "../Pages/ClassDetailPage/ClassDetailPage";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ export const router = createBrowserRouter([
       {
         path: 'classes',
         element: <Classes></Classes>
+      },
+      {
+        path: 'classes/:id',
+        element: <ClassDetailPage></ClassDetailPage>,
+        loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
       },
       {
         path: 'forum',
