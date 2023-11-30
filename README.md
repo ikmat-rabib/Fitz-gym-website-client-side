@@ -1,5 +1,5 @@
-# Project: Fitz
-**Live Link: **
+# Project: Fitz (A fitness Website)
+**Live Link: https://assignment-12-c2bbc.web.app/**
 
 
 # 5 key features: 
